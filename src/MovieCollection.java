@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class MovieCollection
 {
@@ -187,16 +188,42 @@ public class MovieCollection
     }
 
     sortResults(results);
+//    ArrayList<String> actors = new ArrayList<String>();
+//    for (Movie result : results) {
+//      String[] actorList = result.getCast().split("\\|");
+//      actors += Arrays.asList(actorList);
+//    }
+    // ArrayList<String> actors = new ArrayList<String>();
 
     // now, display them all to the user
-    for (int i = 0; i < results.size(); i++)
-    {
-      String cast = results.get(i).getCast();
+//    for (int i = 0; i < results.size(); i++)
+//    {
+//      String cast = results.get(i).getCast();
+//      String[] actorList = cast.split("\\|");
+//      actorList<String> = new ArrayList<String>(actorList.toList());
+//      for (String actor : actorList) {
+//        if (actor.indexOf(searchTerm) != -1) {
+//          actors.add(actor);
+//        }
+//      }
+//
+//      // this will print index 0 as choice 1 in the results list; better for user!
+//      int choiceNum = i + 1;
+//
+//      System.out.println("" + choiceNum + ". " + actorList[i]);
+//    }
 
-      // this will print index 0 as choice 1 in the results list; better for user!
-      int choiceNum = i + 1;
 
-      System.out.println("" + choiceNum + ". " + cast);
+//    for (int k = 0; k < actors.size(); k++) {
+//      if (actors.get(k).indexOf("tom") == -1) {
+//        actors.remove(k);
+//        k--;
+//      }
+//    }
+
+    for (int j = 0; j < results.size(); j++) {
+      int choiceNum = j + 1;
+      System.out.println("" + choiceNum + ". " + results.get(j).getCast());
     }
 
     System.out.println("\n ** Press Enter to Return to Main Menu **");
